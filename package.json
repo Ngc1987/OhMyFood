@@ -1,0 +1,19 @@
+{
+  "name": "projet3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 de la formation developpeur front-end OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ngc1987/Projet-3-OhMyFood.git"
+  },
+  "author": "Thomas Semeria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ngc1987/Projet-3-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Ngc1987/Projet-3-OhMyFood#readme"
+}

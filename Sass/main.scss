@@ -1,0 +1,100 @@
+@import "./Base/fonts.scss";
+@import "./Layout/header.scss";
+@import "./Abstracts/variables.scss";
+
+* {
+    font-family: roboto , sans-serif ;
+}
+:root {
+    font-size: 12px;
+}
+
+
+body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    head {
+        font-family: shrikhandregular;
+        text-align: center;
+        font-size: 2.4rem;
+        background: rgb(255, 255, 255);
+    }
+
+    main {
+        background: $primary;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        p {
+        padding: 15px 30%;
+        margin-top: -4px;
+        background: #eaeaea;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-top: 3px solid #cecece;
+        width: 100%;
+        height: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            font-weight: bolder;
+            padding: 0px 60px;
+            background: $primary;
+            margin: 0;
+        }
+        #descript {
+            font-size: 1.4rem;
+            padding: 20px 30px;
+        }
+        i {
+            color: #353535;
+            padding-right: 10px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+#headbutton {
+    width: 220px;
+    height: 50px;
+    background: linear-gradient(135deg, #ec73da, #a05adc);
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 55px;
+}
+        
+#fonction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        align-self: flex-start;
+        margin-left: 20px;
+        margin-top: 50px;
+        font-size: 2rem;
+    }
+}
