@@ -1,0 +1,34 @@
+@import "./Base/fonts.scss";
+@import "./Abstracts/variables.scss";
+@import "./Abstracts/mixins.scss";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: $footercolor;
+    color: white;
+
+    &__title {
+        font-family: $fontohmyfood;
+        font-size: 1.5rem;
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    &__nav {
+        font-size: 1.3rem;
+        margin-left: 25px;
+        margin-top: 10px;
+        line-height: 75%;
+    }
+}
+
+.fa-utensils {
+    padding-right: 10px;
+    font-size: 1.2rem;
+}
+
+.fa-hands-helping {
+    padding-right: 5px;
+    font-size: 1.1rem;
+}
