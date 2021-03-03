@@ -10,30 +10,6 @@
   font-weight: normal;
   font-style: normal;
 }
-header {
-  margin: 0 auto;
-  text-align: center;
-}
-header h1 {
-  font-family: shrikhandregular;
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: -5px;
-}
-header + p {
-  padding: 15px 30%;
-  background: #eaeaea;
-  font-size: 1.3rem;
-  font-weight: bold;
-  border-top: 3px solid #cecece;
-}
-header i {
-  color: #353535;
-  padding-right: 10px;
-  text-align: center;
-  font-size: 1.3rem;
-}
-
 * {
   font-family: roboto, sans-serif;
 }
@@ -46,6 +22,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -55,8 +32,9 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-header head {
+header h1 {
   font-family: shrikhandregular, serif;
   text-align: center;
   font-size: 2.4rem;
@@ -77,7 +55,7 @@ header main p {
   font-weight: bold;
   border-top: 3px solid #cecece;
   width: 100%;
-  height: 20px;
+  height: 25px;
 }
 header main h2 {
   font-size: 2rem;
@@ -190,6 +168,8 @@ header main a {
   background: #f6f6f6;
   margin-top: 45px;
   padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .restaurants h2 {
   align-self: flex-start;
@@ -241,7 +221,19 @@ header main a {
   font-size: 1.4rem;
   margin-top: -12px;
 }
-.restaurants__title-heart {
+.restaurants__title-heart .far {
+  align-items: center;
+  align-self: center;
+  font-size: 1.8rem;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+.restaurants__title-heart .far:hover {
+  display: none;
+}
+.restaurants__title-heart .fas {
+  color: #9356dc;
+  display: none;
   align-items: center;
   align-self: center;
   font-size: 1.8rem;
@@ -254,26 +246,31 @@ header main a {
   flex-direction: column;
   background: #353535;
   color: white;
+  width: 100%;
 }
-.footer__title {
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 350px;
+}
+.footer__content-title {
   font-family: shrikhandregular, serif;
   font-size: 1.5rem;
   margin-left: 25px;
   margin-top: 30px;
 }
-.footer__nav {
+.footer__content-nav {
   font-size: 1.3rem;
   margin-left: 25px;
   margin-top: 10px;
   line-height: 75%;
 }
-
-.fa-utensils {
+.footer__content-nav .fa-utensils {
   padding-right: 10px;
   font-size: 1.2rem;
 }
-
-.fa-hands-helping {
+.footer__content-nav .fa-hands-helping {
   padding-right: 5px;
   font-size: 1.1rem;
 }

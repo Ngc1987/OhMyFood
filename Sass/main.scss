@@ -15,6 +15,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -24,8 +25,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    head {
+    h1 {
         font-family: $fontohmyfood;
         text-align: center;
         font-size: 2.4rem;
@@ -47,7 +49,7 @@ header {
         font-weight: bold;
         border-top: 3px solid #cecece;
         width: 100%;
-        height: 20px;
+        height: 25px;
         }
         h2 {
             font-size: 2rem;
@@ -66,6 +68,7 @@ header {
             text-align: center;
             font-size: 1.3rem;
         }
+
         a {
             text-decoration: none;
         }
@@ -166,6 +169,8 @@ header {
     background: $primary;
     margin-top: 45px;
     padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     h2 {
         align-self: flex-start;
@@ -221,11 +226,27 @@ header {
         }
 
         &-heart {
+            .far {
             align-items: center;
             align-self: center;
             font-size: 1.8rem;
             margin-right: 25px;
             margin-top: 15px;
+
+                &:hover {
+                    display: none;
+                }
+            }
+
+            .fas {
+                color: $secondary;
+                display: none;
+                align-items: center;
+                align-self: center;
+                font-size: 1.8rem;
+                margin-right: 25px;
+                margin-top: 15px;
+            }
         }
     }
 
@@ -236,28 +257,39 @@ header {
     flex-direction: column;
     background: $footercolor;
     color: white;
+    width: 100%;
 
-    &__title {
-        font-family: $fontohmyfood;
-        font-size: 1.5rem;
-        margin-left: 25px;
-        margin-top: 30px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 350px;
+    
+        &-title {
+            font-family: $fontohmyfood;
+            font-size: 1.5rem;
+            margin-left: 25px;
+            margin-top: 30px;
+        }
+
+        &-nav {
+            font-size: 1.3rem;
+            margin-left: 25px;
+            margin-top: 10px;
+            line-height: 75%;
+
+            .fa-utensils {
+                padding-right: 10px;
+                font-size: 1.2rem;
+            }
+            
+            .fa-hands-helping {
+                padding-right: 5px;
+                font-size: 1.1rem;
+            }
+        }
     }
-
-    &__nav {
-        font-size: 1.3rem;
-        margin-left: 25px;
-        margin-top: 10px;
-        line-height: 75%;
-    }
 }
 
-.fa-utensils {
-    padding-right: 10px;
-    font-size: 1.2rem;
-}
 
-.fa-hands-helping {
-    padding-right: 5px;
-    font-size: 1.1rem;
-}
+
