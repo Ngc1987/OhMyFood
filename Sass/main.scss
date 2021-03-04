@@ -2,6 +2,7 @@
 @import "./Layout/header.scss";
 @import "./Abstracts/variables.scss";
 @import "./Abstracts/mixins.scss";
+@import "./Abstracts/breakpoints.scss";
  
 * {
     font-family: roboto , sans-serif ;
@@ -22,11 +23,17 @@ body {
     width: 100%;
 }
 
+.whitelink {
+    text-decoration: none;
+    color: white;
+}
+
+
 .pinkbutton {
     text-decoration: none;
     width: 220px;
     height: 50px;
-    background: linear-gradient(135deg, #ec73da, #a05adc);
+    background: linear-gradient(135deg, $secondary, $primary);
     border-radius: 25px;
     color: white;
     display: flex;
@@ -39,19 +46,21 @@ body {
     text-align: center;
     transform: scale(1);
     transition: transform 600ms;
+    @include box-shadow;
 
     &:hover {
         transform: scale(1.1);
+        @include box-shadow-hover;
     }
 }
 
 header {
-    margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     h1 {
         font-family: $fontohmyfood;
@@ -110,26 +119,37 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 
     &__title {
         align-self: flex-start;
         margin-left: 20px;
         margin-top: 50px;
         font-size: 2rem;
+
+        @include md {
+            align-self: center;
+            margin-left: 0px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 4px 15px;
+            border-top: 2px dashed $secondary;
+            border-bottom: 2px solid $primary;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
     }
 }
 
-.blacklink {
-    text-decoration: none;
-    color: black;
-}
 
 .fonction__button {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 325px;
+    width: 90%;
     height: 75px;
     background: $backgroundcolor;
     @include box-shadow;
@@ -138,6 +158,12 @@ header {
     border-radius: 15px;
     transform: scale(1);
     transition: transform 800ms;
+
+    @include lg {
+        justify-content: center;
+    }
+
+    
 
     &:hover {
         background: #fafafa;
@@ -161,9 +187,20 @@ header {
         justify-content: center;
         align-items: center;
 
+        @include lg {
+            width: 44px;
+            height: 44px;
+            top: 18px;
+            border-radius: 22px;
+        }
+
         p {
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+
+            @include lg {
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -171,11 +208,20 @@ header {
         margin-left: 40px;
         color: #7e7e7e;
         font-size: 1.8rem;
+
+        @include lg {
+            margin-left: 0px;
+            font-size: 2.5  rem;
+        }
     }
 
     &-text {
         font-size: 1.1rem;
         margin-left: 25px;
+
+        @include lg {
+            font-size: 1.3rem;
+        }
     }
 }
 
@@ -191,11 +237,44 @@ header {
     padding-left: 20px;
     padding-right: 20px;
 
+    @include md {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+
+    &__head {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &-title {
+            width: min-content;
+            
+        }
+    }
+
     h2 {
         align-self: flex-start;
         margin-left: 20px;
         margin-top: 50px;
         font-size: 2rem;
+
+        @include md {
+            text-align: center;
+            align-self: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 4px 15px;
+            border-top: 2px dashed $secondary;
+            border-bottom: 2px solid $primary;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
     }
 
     &__sample {
@@ -207,6 +286,18 @@ header {
         margin-bottom: 18px;
         border-radius: 15px;
         @include box-shadow;
+
+        @include md {
+            margin-bottom: 50px;
+        }
+
+        @include lg {
+            min-width: 40%;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        
 
         &:hover {
             @include box-shadow-hover;
@@ -281,14 +372,24 @@ header {
     &__content {
         display: flex;
         flex-direction: column;
-        align-self: center;
+        align-items: center;
         width: 350px;
+
+        @include md {
+            width: 100%;
+        }
     
         &-title {
             font-family: $fontohmyfood;
             font-size: 1.5rem;
             margin-left: 25px;
             margin-top: 30px;
+
+            @include md {
+                margin-top: 15px;
+                margin-left: 0px;
+                font-size: 2rem;
+            }
         }
 
         &-nav {
@@ -296,6 +397,13 @@ header {
             margin-left: 25px;
             margin-top: 10px;
             line-height: 75%;
+
+            @include md {
+                display: flex;
+                flex-direction: row;
+                width: 80%;
+                justify-content: space-evenly;
+            }
 
             .fa-utensils {
                 padding-right: 10px;
@@ -339,12 +447,26 @@ header {
         width: 100%;
         margin-top: 20px;
 
+        @include md {
+            justify-content: space-around;
+        }
+
         &-title {
             margin-left: 20px;
 
             h2 {
                 font-family: $fontohmyfood;
                 font-size: 2.2rem;
+                padding: 5px 5px;
+
+                @include md {
+                    border-top: 2px dashed $secondary;
+                    border-bottom: 2px dashed $primary;
+                    border-bottom-right-radius: 20px;
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 3px;
+                    border-top-right-radius: 3px;
+                }
             }
         }
 
@@ -358,6 +480,14 @@ header {
 
                 &:hover {
                     display: none;
+                }
+
+                @include md {
+                    padding: 6px 12px;
+                    border-top: 2px dashed $secondary;
+                    border-bottom: 2px dashed $primary;
+                    border-bottom-right-radius: 20px;
+                    border-top-left-radius: 20px;
                 }
             }
 
@@ -387,7 +517,19 @@ main {
     width: 40px;
     margin-top: -1px;
     margin-left: 20px;
-    background-color: #99e2d0;
+    background-color: $tertiary;
+}
+
+
+.bloc__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include md {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .menu {
@@ -396,6 +538,15 @@ main {
     width: 100%;
     margin-bottom: 40px;
     overflow: hidden;
+    opacity: 0;
+
+    @include md {
+        max-width: 50%;
+    }
+
+    @include lg {
+        max-width: 33%;
+    }
 
     h2 {
         margin-left: 20px;
@@ -450,6 +601,85 @@ main {
     }
 }
 
+.entrees {
+    animation: fondu_bas;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    transform: translateY(100px);
+
+    @keyframes fondu_bas {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+.plats {
+    animation: fondu_bas;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-delay: 300ms;
+    transform: translateY(100px);
+
+    @keyframes fondu_bas {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
+.desserts {
+    animation: fondu_bas;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-delay: 600ms;
+    transform: translateY(100px);
+
+    @keyframes fondu_bas {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
+
 #command__button {
     margin-bottom: 30px;
+    align-self: center;
+    opacity: 0;
+    animation: fondu_bas;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+    animation-delay: 900ms;
+    transform: translateY(100px);
+
+    @keyframes fondu_bas {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @include md {
+        justify-content: center;
+        margin: auto;
+    }
 }
