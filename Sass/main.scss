@@ -28,6 +28,11 @@ body {
     color: white;
 }
 
+.blacklink {
+    text-decoration: none;
+    color: black;
+}
+
 
 .pinkbutton {
     text-decoration: none;
@@ -44,15 +49,39 @@ body {
     margin-top: 10px;
     margin-bottom: 55px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
     transform: scale(1);
-    transition: transform 600ms;
+    transition: transform 800ms;
     @include box-shadow;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 1.5rem;
+        background: linear-gradient( 135deg, #ff93e1 -20%, #ae80e5 180%, #ff93e1 -20%, #ae80e5 180%);
+        background-position: 0px 50px;
+        opacity: 0;
+        transition: all 1000ms ease-in;
+      }
 
     &:hover {
         transform: scale(1.1);
         @include box-shadow-hover;
+        text-shadow: 0 4px 3px #311c4b9d;
     }
+
+    &:hover::before {
+        opacity: 1;
+    }
+
 }
+
 
 header {
     text-align: center;
@@ -336,31 +365,49 @@ header {
         }
 
         &-heart {
+            position: relative;
+        
+            .fas {
+            color: $primary;
+            align-items: center;
+            align-self: center;
+            font-size: 1.8rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1;
+            opacity: 1;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            }
+
             .far {
             align-items: center;
             align-self: center;
             font-size: 1.8rem;
-            margin-right: 25px;
-            margin-top: 15px;
-
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 20;
+            transition: opacity 0.5s linear;
+            background-color: rgb(255, 255, 255);
+        
                 &:hover {
-                    display: none;
-                }
-            }
-
-            .fas {
-                color: $primary;
-                display: none;
-                align-items: center;
-                align-self: center;
-                font-size: 1.8rem;
-                margin-right: 25px;
-                margin-top: 15px;
+                    opacity: 0;
+                    }
             }
         }
-    }
 
+        &-heartfullgradient {
+            background: linear-gradient(45deg, $secondary 0%, $primary 100%);
+        }
+
+        
+        
+    }
 }
+
 
 .footer {
     display: flex;

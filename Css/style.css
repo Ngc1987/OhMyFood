@@ -33,6 +33,11 @@ body {
   color: white;
 }
 
+.blacklink {
+  text-decoration: none;
+  color: black;
+}
+
 .pinkbutton {
   text-decoration: none;
   width: 220px;
@@ -48,17 +53,37 @@ body {
   margin-top: 10px;
   margin-bottom: 55px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
   transform: scale(1);
-  transition: transform 600ms;
+  transition: transform 800ms;
   -moz-box-shadow: 0px 0px 15px #d4d4d4;
   -webkit-box-shadow: 0px 0px 15px #d4d4d4;
   box-shadow: 0px 0px 15px #d4d4d4;
+}
+.pinkbutton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, #ff93e1 -20%, #ae80e5 180%, #ff93e1 -20%, #ae80e5 180%);
+  background-position: 0px 50px;
+  opacity: 0;
+  transition: all 1000ms ease-in;
 }
 .pinkbutton:hover {
   transform: scale(1.1);
   -moz-box-shadow: 0px 0px 15px #a5a5a5;
   -webkit-box-shadow: 0px 0px 15px #a5a5a5;
   box-shadow: 0px 0px 15px #a5a5a5;
+  text-shadow: 0 4px 3px #311c4b9d;
+}
+.pinkbutton:hover::before {
+  opacity: 1;
 }
 
 header {
@@ -333,24 +358,39 @@ header main i {
   font-size: 1.4rem;
   margin-top: -12px;
 }
+.restaurants__title-heart {
+  position: relative;
+}
+.restaurants__title-heart .fas {
+  color: #9356dc;
+  align-items: center;
+  align-self: center;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 .restaurants__title-heart .far {
   align-items: center;
   align-self: center;
   font-size: 1.8rem;
-  margin-right: 25px;
-  margin-top: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  transition: opacity 0.5s linear;
+  background-color: white;
 }
 .restaurants__title-heart .far:hover {
-  display: none;
+  opacity: 0;
 }
-.restaurants__title-heart .fas {
-  color: #9356dc;
-  display: none;
-  align-items: center;
-  align-self: center;
-  font-size: 1.8rem;
-  margin-right: 25px;
-  margin-top: 15px;
+.restaurants__title-heartfullgradient {
+  background: linear-gradient(45deg, #FF79DA 0%, #9356dc 100%);
 }
 
 .footer {
