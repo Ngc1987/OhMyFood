@@ -297,7 +297,7 @@ body {
 
 
 
-header {
+.header {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -319,7 +319,7 @@ header {
         color: black;
     }
 
-    main {
+    &__title {
         background: $backgroundcolor;
         display: flex;
         flex-direction: column;
@@ -343,7 +343,7 @@ header {
             background: $backgroundcolor;
             margin: 0;
         }
-        #descript {
+        &-descript {
             font-size: 1.4rem;
             padding: 20px 30px;
         }
