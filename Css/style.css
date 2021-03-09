@@ -866,6 +866,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  line-height: 0.7;
+  margin-top: 10px;
 }
 .menu__sample-descript p {
   font-size: 1.2rem;
@@ -873,21 +875,22 @@ main {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding-right: 10px;
 }
-.menu__sample-descript h3 {
+.menu__sample-descript h4 {
   font-size: 1.2rem;
   margin-right: 20px;
   margin-top: 14px;
   transition: 1s;
 }
-.menu__sample-descript:hover h3 {
+.menu__sample-descript:hover h4 {
   margin-right: 75px;
 }
 .menu__sample-descript .check__icon {
   position: absolute;
   content: "";
   background: #99E2D0;
-  top: -23px;
+  top: -28px;
   right: -55px;
   height: 72px;
   width: 55px;

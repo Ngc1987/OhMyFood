@@ -892,6 +892,8 @@ main {
             white-space: nowrap;
             overflow: hidden;
         }
+
+        
         
 
         &-descript {
@@ -899,6 +901,8 @@ main {
             flex-direction: row;
             justify-content: space-between;
             position: relative;
+            line-height: 0.7;
+            margin-top: 10px;
 
             p {
                 font-size: 1.2rem;
@@ -906,16 +910,17 @@ main {
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
+                padding-right: 10px;    
             }
 
-            h3 {
+            h4 {
                 font-size: 1.2rem;
                 margin-right: 20px;
                 margin-top: 14px;
                 transition: 1s;
             }
 
-            &:hover h3 {
+            &:hover h4 {
                 margin-right: 75px;
             }
 
@@ -923,7 +928,7 @@ main {
                 position: absolute;
                 content: "";
                 background: $tertiary;
-                top: -23px;
+                top: -28px;
                 right: -55px;
                 height: 72px;
                 width: 55px;
