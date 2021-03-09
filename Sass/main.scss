@@ -657,6 +657,7 @@ body {
 
         @include md {
             width: 100%;
+            align-items: center;
         }
     
         &-title {
@@ -669,6 +670,7 @@ body {
                 margin-top: 15px;
                 margin-left: 0px;
                 font-size: 2rem;
+                text-align: center;
             }
         }
 
@@ -890,6 +892,7 @@ main {
             white-space: nowrap;
             overflow: hidden;
         }
+        
 
         &-descript {
             display: flex;
