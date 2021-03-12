@@ -1,12 +1,8 @@
 @mixin box-shadow($shadows: 0px 0px 15px #d4d4d4) {
-    -moz-box-shadow: $shadows;
-    -webkit-box-shadow: $shadows;
     box-shadow: $shadows;
 }
 
 @mixin box-shadow-hover($shadows: 0px 0px 15px #a5a5a5) {
-    -moz-box-shadow: $shadows;
-    -webkit-box-shadow: $shadows;
     box-shadow: $shadows;
 }
 
