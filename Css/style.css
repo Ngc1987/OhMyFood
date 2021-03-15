@@ -640,13 +640,19 @@ body {
 
 .header__picture {
   display: flex;
-  height: 260px;
+  max-height: 260px;
+  width: 100%;
 }
 .header__picture img {
   object-fit: cover;
   max-height: 100%;
   width: 100%;
   z-index: -10;
+}
+@media (min-width: 768px) {
+  .header__picture {
+    max-height: 350px;
+  }
 }
 
 .menupage {

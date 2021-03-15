@@ -676,13 +676,18 @@ body {
 
 .header__picture {
     display: flex;
-    height: 260px;
+    max-height: 260px;
+    width: 100%;
 
     img {
         object-fit: cover;
         max-height: 100%;
         width: 100%;
         z-index: -10;
+    }
+
+    @include md {
+        max-height: 350px;
     }
 }
 
